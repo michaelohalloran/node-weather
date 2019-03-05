@@ -8,8 +8,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>{{title}}</h1>
-    <p>Created by {{name}}</p>
-    <img src="./img/sunset.jpg" alt="sunset">
+    <div class="main-content">
+        {{>header}}
+        <img class="portrait" src="./img/sunset.jpg" alt="sunset">
+    </div>
+    {{>footer}}
 </body>
 </html>
