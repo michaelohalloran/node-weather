@@ -55,7 +55,7 @@ app.get("/weather", (req, res) => {
 		});
 	}
 
-	geocode(req.query.address, (err, { lat, lng, place }) => {
+	geocode(req.query.address, (err, { lat, lng, place } = {}) => {
 		if (err) {
 			return res.send({ err });
 		}

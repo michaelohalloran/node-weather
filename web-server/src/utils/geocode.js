@@ -3,10 +3,10 @@ const request = require("request");
 const geocode = (address, callback) => {
 	const geocode_url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${address}.json?access_token=${process.env
 		.MAP_TOKEN}&limit=1`;
-	console.log("token: ", process.env);
-	console.log("address: ", address);
+	// console.log("token: ", process.env);
+	// console.log("address: ", address);
 	request({ url: geocode_url, json: true }, (err, { body }) => {
-		console.log("body: ", body);
+		// console.log("body: ", body);
 		if (err) {
 			callback("Unable to connect to geocoding service");
 		} else if (body.features.length === 0) {
